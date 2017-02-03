@@ -1180,7 +1180,7 @@
         "var myStr = \"FirstLine\\n\\t\\\\SecondLine\\nThirdLine\";"
       ],
       "tests": [
-        "assert(myStr.match(/ /g) === null, 'message: <code>myStr</code> should not contain any spaces');",
+        "assert(!/ /.test(myStr), 'message: <code>myStr</code> should not contain any spaces');",
         "assert(/FirstLine/.test(myStr) && /SecondLine/.test(myStr) && /ThirdLine/.test(myStr), 'message: <code>myStr</code> should contain the strings <code>FirstLine</code>, <code>SecondLine</code> and <code>ThirdLine</code> (remember case sensitivity!)');",
         "assert(/FirstLine\\n/.test(myStr), 'message: <code>FirstLine</code> should be followed by the newline character <code>\\n</code>');",
         "assert(/\\n\\t/.test(myStr), 'message: The newline character <code>\\n</code> should be followed by the tab character <code>\\t</code>');",
